@@ -10,6 +10,9 @@ composeBom = "2025.11.01"
 room = "2.8.4"
 kspver = "2.3.13"
 room3Common = "3.0.3"
+foundation = "1.12.1"
+uiText = "1.12.1"
+runtime = "1.12.1"
 
 
 [libraries]
@@ -36,6 +39,9 @@ lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel
 lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version = "2.9.6" }
 navigation-compose = { module = "androidx.navigation:navigation-compose", version = "2.9.6"}
 androidx-room3-common = { group = "androidx.room3", name = "room3-common", version.ref = "room3Common" }
+androidx-compose-foundation = { group = "androidx.compose.foundation", name = "foundation", version.ref = "foundation" }
+androidx-compose-ui-text = { group = "androidx.compose.ui", name = "ui-text", version.ref = "uiText" }
+androidx-compose-runtime = { group = "androidx.compose.runtime", name = "runtime", version.ref = "runtime" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
