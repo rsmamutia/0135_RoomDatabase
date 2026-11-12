@@ -36,7 +36,7 @@ import com.example.pertemuan9.R
 import com.example.pertemuan9.room.Siswa
 import com.example.pertemuan9.uicontroller.DestinasiNavigasi
 import com.example.pertemuan9.viewModel.HomeViewModel
-import com.example.pertemuan9.uicontroller.PenyediaViewModel
+import com.example.pertemuan9.viewModel.PenyediaViewModel
 
 object DestinasiHome : DestinasiNavigasi {
     override val route = "home"

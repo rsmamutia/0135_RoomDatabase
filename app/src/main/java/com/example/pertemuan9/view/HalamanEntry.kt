@@ -31,6 +31,8 @@ import com.example.pertemuan9.viewModel.EntryViewModel
 import com.example.pertemuan9.viewModel.PenyediaViewModel
 import com.example.pertemuan9.viewModel.UIStateSiswa
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.launch
+import androidx.compose.runtime.rememberCoroutineScope
 
 object DestinasiEntry: DestinasiNavigasi {
     override val route = "item_entry"
@@ -60,7 +62,9 @@ fun EntrySiswaScreen(
             onSiswaValueChange = viewModel::updateuiState,
             onSaveClick = {
                 coroutineScope.launch {
-                    viewModel.saveSiswa()
+                    viewModel.saveSiswa(
+                        insertSiswa = TODO()
+                    )
                     navigateBack()
                 }
             },
