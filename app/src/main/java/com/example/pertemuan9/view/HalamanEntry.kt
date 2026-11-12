@@ -28,10 +28,9 @@ import com.example.pertemuan9.R
 import com.example.pertemuan9.uicontroller.DestinasiNavigasi
 import com.example.pertemuan9.viewModel.DetailSiswa
 import com.example.pertemuan9.viewModel.EntryViewModel
+import com.example.pertemuan9.viewModel.PenyediaViewModel
 import com.example.pertemuan9.viewModel.UIStateSiswa
 import kotlinx.coroutines.launch
-import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.pertemuan9.viewModel.PenyediaViewModel
 
 object DestinasiEntry: DestinasiNavigasi {
     override val route = "item_entry"
@@ -71,6 +70,10 @@ fun EntrySiswaScreen(
                 .fillMaxWidth()
         )
     }
+}
+
+class PenyediaViewmodel(factory: Any) {
+
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
