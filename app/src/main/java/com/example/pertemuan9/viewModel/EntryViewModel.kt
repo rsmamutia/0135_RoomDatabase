@@ -3,6 +3,10 @@ package com.example.pertemuan9.viewModel
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import com.example.pertemuan9.room.Siswa
+import com.example.pertemuan9.repositori.RepositoriSiswa
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 
 class EntryViewModel(private val repositoriSiswa: RepositoriSiswa): ViewModel() {
     var uiStateSiswa by mutableStateOf(UIStateSiswa())
@@ -19,8 +23,9 @@ class EntryViewModel(private val repositoriSiswa: RepositoriSiswa): ViewModel() 
             UIStateSiswa(detailSiswa = detailSiswa, isEntryValid = validasiInput(detailSiswa))
     }
 
-    suspend fun saveSiswa() {
+    suspend fun saveSiswa(insertSiswa: Nothing?.(Siswa) -> Unit) {
         if (validasiInput()) {
+            val repositorisiswa = null
             repositorisiswa.insertSiswa(uiStateSiswa.detailSiswa.toSiswa())
         }
     }
