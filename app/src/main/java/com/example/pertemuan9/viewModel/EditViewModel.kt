@@ -1,6 +1,8 @@
 package com.example.pertemuan9.viewModel
 
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -14,7 +16,7 @@ class EditViewModel (
     savedStateHandle: SavedStateHandle,
     private val repositoriSiswa: RepositoriSiswa): ViewModel() {
 
-    var uiStateSiswa by mutableStateOf(UIStateSiswa))
+    var uiStateSiswa by mutableStateOf(UIStateSiswa())
             private set
 
     private val idSiswa: Int = checkNotNull(savedStateHandle[DestinasiDetailSiswa.itemIdArg])
@@ -25,5 +27,10 @@ class EditViewModel (
                 .first()
                 .toUiStateSiswa()
         }
+    }
+
+    fun updateUiState(detailSiswa: DetailSiswa){
+        uiStateSiswa =
+            UIStateSiswa(detailSiswa = detailSiswa, isEntryValid = validasiInput(detailSiswa))
     }
 }
