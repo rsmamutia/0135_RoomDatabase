@@ -7,7 +7,6 @@ import com.example.pertemuan9.repositori.RepositoriSiswa
 import com.example.pertemuan9.uicontroller.DestinasiDetailSiswa
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.WhileSubscribed
 import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
@@ -37,3 +36,9 @@ class DetailViewModel (
         private const val TIMEOUT_MILLIS = 5_000L
     }
 }
+
+//UI State for ItemDetailScreen
+
+data class DetailSiswaUiState(
+    val detailSiswa: DetailSiswa = DetailSiswa()
+)
